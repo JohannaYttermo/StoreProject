@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JY webbshop</title>
+</head>
+<body>
+    <!-- Hemsidans nav -->
+        <nav>
+        <a href="index.html" id="logo">JY webbshop</a>
+        <br><br><br><br>
+        <a href="admin.html">Adminsida</a>
+        <br><br>
+        <div id="navbar-right">
+        <ul id="header">
+        </ul>
+        </div>
+        <div id="cartButton"> 
+        <input type="button" id="kundvagnbutton" value="kundvagn"><span id="cartItemNumber"></span> 
+        </div>
+        </nav>
+
+          
+  
+    <!-- Shopping cart ruta -->
+    <section id="showCart" class="hideCart"> 
+        <article class="articleFrameCart">
+            <h3><label> Varukorg</label></h3>
+            <table id="tillagd"></table>
+            <p id="totalSumCart"></p>
+        </article>
+    </section>
+
+    <!-- Beställning -->
+    <section id="showCheckout" class="hideCheckout">
+        <article class="articleFrame">
+            <h1>Beställning:</h1>
+            <br>
+
+            <div class="flex-container">
+                <hr id="cartHR">
+                <p id="checkout"></p>
+
+                <br>
+            </div>
+
+            <div>
+                <p id="checkform"></p>
+                    <fieldset>
+                        <legend><strong> Kunduppgifter: </strong></legend><br>
+                            <form onsubmit="return false">
+                                <input type="text" id="name" name="name" placeholder="Skriv in namn..." required>
+                                <br><br>
+                                <input type="email" id="epost" name="epost" placeholder="Skriv in e-post..." required>
+                                <br><br>
+                                <input type="text" id="address" name="address" placeholder="Skriv in address..." required>
+                                <br><br>
+                                <select name="shipping" id="shipping" required>
+                                <option value="" disabled selected>---</option>
+                                <option value="standard shipping">Standard shipping</option>
+                                <option value="Express">Express</option>
+                                </select>
+                                <br><br>
+                                <input type="submit" value="slutför beställning" onClick="addUser()">
+                                
+                            </form>
+                    </fieldset>
+            </div>
+        </article>
+    </section>
+    <br><br>
+
+
+    <!-- Webbshop innehåll -->
+    <section id="webbutik" class="showWebbutik"></section>
+
+    
+    
+<script src="app.js"></script>
+</body>
+</html>

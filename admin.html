@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JY - admin</title>
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html" id="logo">JY webbshop</a>
+        <br><br><br>
+        <div id="navbar-right">
+        <ul>
+            <li><a href="index.html">Tillbaka till shoppen</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <section>
+        <article class="articleFrame">
+                <h1>Admin sida</h1>
+                <br><br>
+            <fieldset>
+                <legend><strong>Kunduppgifter:</strong></legend><br>
+                    <form onSubmit="return false">
+                        <input type="text" id="admin-name" name="Name" placeholder="Skriv in namn..." required>
+                        <br><br>
+                        <input type="email" id="admin-epost" name="epost" placeholder="Skriv in e-post..." required>
+                        <br><br>
+                        <input type="text" id="admin-address" name="address" placeholder="Skriv in address..." required>
+                        <br><br>
+                        <input type="text" id="admin-id" name="idproducts" placeholder="Skriv in produkt-ID">
+                        <br><br>
+                        <select name="shipping" id="admin-shipping" required>
+                            <option value="" disabled selected>---</option>
+                            <option value="standard shipping">Standard</option>
+                            <option value="Express">Express</option>
+                        </select>
+                    </form>
+                </fieldset>
+        </article>
+    </section>
+
+    <section id="adminSection"></section>
+
+    <script src="admin.js"></script>
+</body>
+</html>
